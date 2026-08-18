@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>शुभ विवाह | Mamta ❤️ Abhishek</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:white;
+    font-family:Georgia, serif;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   ROSE PETALS
+========================== */
+
+.petal{
+    position:fixed;
+    top:-100px;
+    font-size:24px;
+    animation:fall linear infinite;
+    pointer-events:none;
+    z-index:999;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(120vh);
+    }
+}
+
+/* ==========================
+   GANESH + INVITATION
+========================== */
+
+.ganesh-section{
+
+    min-height:70vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 1.3fr;
+
+    align-items:center;
+
+    gap:50px;
+
+    padding:40px 60px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #000,
+        #140d02
+    );
+}
+
+.ganesh-left{
+    text-align:center;
+}
+
+.ganesh-title{
+    font-size:26px;
+    color:#f8e7a1;
+    margin-bottom:20px;
+}
+
+.ganesh-left img{
+
+    width:300px;
+    max-width:90%;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 20px rgba(255,215,0,.7);
+}
+
+.ganesh-right{
+    text-align:left;
+}
+
+.shubh{
+
+    color:#ffd700;
+
+    font-size:54px;
+
+    margin-bottom:20px;
+}
+
+.couple-title{
+
+    font-size:58px;
+
+    color:#f8e7a1;
+
+    text-shadow:
+    0 0 10px gold,
+    0 0 20px gold;
+}
+
+.parents{
+
+    margin-top:18px;
+
+    line-height:1.9;
+
+    color:#f5f5f5;
+
+    font-size:20px;
+}
+
+.wedding-date{
+
+    margin-top:18px;
+
+    color:#ffd700;
+
+    font-size:26px;
+}
+
+.mantra{
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    color:#fff4c1;
+
+    font-size:20px;
+}
+
+/* ==========================
+   HERO VIDEO
+========================== */
+
+.hero{
+
+    height:85vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#bgVideo{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    rgba(0,0,0,.55);
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:10;
+
+    text-align:center;
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+    color:#f8e7a1;
+
+    text-shadow:
+    0 0 10px gold,
+    0 0 25px gold;
+}
+
+.hero-content p{
+
+    font-size:24px;
+
+    margin-top:15px;
+}
+
+/* ==========================
+   COMMON SECTION
+========================== */
+
+.section{
+    padding:45px 20px;
+}
+
+.heading{
+
+    text-align:center;
+
+    font-size:34px;
+
+    color:#ffd700;
+
+    margin-bottom:20px;
+}
+
+/* ==========================
+   COUNTDOWN
+========================== */
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.box{
+
+    min-width:120px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    border:1px solid gold;
+
+    background:#111;
+
+    text-align:center;
+}
+
+.number{
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    color:#ffd700;
+}
+
+/* ==========================
+   EVENTS + VIDEO
+========================== */
+
+.events-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.event{
+
+    background:#111;
+
+    border-left:4px solid gold;
+
+    padding:12px 16px;
+
+    margin-bottom:8px;
+
+    border-radius:0 10px 10px 0;
+}
+
+.video-side video{
+
+    width:100%;
+
+    border-radius:15px;
+}
+
+/* ==========================
+   VENUE
+========================== */
+
+.venue{
+
+    text-align:center;
+
+    padding-top:30px;
+
+    padding-bottom:30px;
+}
+
+.venue h3{
+
+    margin-top:10px;
+
+    font-size:24px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:14px 32px;
+
+    background:gold;
+
+    color:black;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:bold;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+.credit{
+
+    text-align:right;
+
+    margin-top:30px;
+
+    color:#888;
+
+    font-size:13px;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.ganesh-section{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    padding:30px 20px;
+}
+
+.ganesh-right{
+    text-align:center;
+}
+
+.shubh{
+    font-size:36px;
+}
+
+.couple-title{
+    font-size:42px;
+}
+
+.parents{
+    font-size:17px;
+}
+
+.mantra{
+    font-size:17px;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.events-wrapper{
+    grid-template-columns:1fr;
+}
+
+.box{
+    min-width:90px;
+}
+
+.number{
+    font-size:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PETALS -->
+
+<div class="petal" style="left:5%;animation-duration:9s;">🌹</div>
+<div class="petal" style="left:20%;animation-duration:12s;">🌹</div>
+<div class="petal" style="left:35%;animation-duration:10s;">🌹</div>
+<div class="petal" style="left:55%;animation-duration:14s;">🌹</div>
+<div class="petal" style="left:75%;animation-duration:11s;">🌹</div>
+<div class="petal" style="left:90%;animation-duration:13s;">🌹</div>
+
+<!-- GANESH SECTION -->
+
+<section class="ganesh-section">
+
+<div class="ganesh-left">
+
+<div class="ganesh-title">
+🕉️ श्री गणेशाय नमः
+</div>
+
+<img src="images/ganesh.jpg" alt="Ganesh Ji">
+
+</div>
+
+<div class="ganesh-right">
+
+<div class="shubh">
+॥ शुभ विवाह ॥
+</div>
+
+<div class="couple-title">
+Mamta ❤️ Abhishek
+</div>
+
+<div class="parents">
+
+D/o Krishna Kumar
+
+<br><br>
+
+Weds
+
+<br><br>
+
+Abhishek Kumar Yadav
+
+<br>
+
+S/o Parashuram Singh
+
+</div>
+
+<div class="wedding-date">
+2 December 2026
+</div>
+
+<div class="mantra">
+
+वक्रतुण्ड महाकाय सूर्यकोटि समप्रभा।
+<br>
+निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VIDEO HERO -->
+
+<section class="hero">
+
+<video autoplay muted loop playsinline id="bgVideo">
+<source src="media/wedding.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+Mamta ❤️ Abhishek
+</h1>
+
+<p>
+Together Forever • 2 December 2026
+</p>
+
+</div>
+
+</section>
+
+<!-- COUNTDOWN -->
+
+<section class="section">
+
+<h2 class="heading">
+Wedding Countdown
+</h2>
+
+<div class="countdown">
+
+<div class="box">
+<div class="number" id="days">0</div>
+Days
+</div>
+
+<div class="box">
+<div class="number" id="hours">0</div>
+Hours
+</div>
+
+<div class="box">
+<div class="number" id="minutes">0</div>
+Minutes
+</div>
+
+<div class="box">
+<div class="number" id="seconds">0</div>
+Seconds
+</div>
+
+</div>
+
+</section>
+
+<!-- EVENTS -->
+
+<section class="section">
+
+<h2 class="heading">
+Wedding Events
+</h2>
+
+<div class="events-wrapper">
+
+<div>
+
+<div class="event">Tilak — 25 November 2026</div>
+<div class="event">Mehndi — 28 November 2026 • 11:30 AM</div>
+<div class="event">Sangeet — 28 November 2026 • 6:30 PM</div>
+<div class="event">Haldi — 29–30 November 2026</div>
+<div class="event">Barat — 2 December 2026 • 4:00 PM</div>
+<div class="event">Jaimala — 2 December 2026 • 5:00 PM</div>
+<div class="event">Vivah — 3 December 2026 • 4:00 AM</div>
+
+</div>
+
+<div class="video-side">
+
+<video controls>
+<source src="media/wedding.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VENUE -->
+
+<section class="section venue">
+
+<h2 class="heading">
+Venue
+</h2>
+
+<h3>
+SAS One Farms
+</h3>
+
+<a
+class="btn"
+href="https://maps.app.goo.gl/f33K9WHWEhPQK4F28"
+target="_blank">
+
+Get Directions
+
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<section class="footer">
+
+<h2>
+Mamta ❤️ Abhishek
+</h2>
+
+<br>
+
+<p>
+We look forward to celebrating with you.
+</p>
+
+<div class="credit">
+Created by Abhimanyu
+</div>
+
+</section>
+
+<script>
+
+const weddingDate =
+new Date("December 2, 2026 16:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+
+const distance = weddingDate - now;
+
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
